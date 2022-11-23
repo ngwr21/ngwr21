@@ -37,11 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-     'django.contrib.auth',
-    'django.contrib.messages',
-    'django.contrib.sites',
+    #'django.contrib.messages',
+    'wallet1.apps.Wallet1Config',
 
-    'allauth',
+    #'django.contrib.sites',
+    #'allauth',
     'allauth.account',
     'allauth.socialaccount',
     # ... include the providers you want to enable:
@@ -63,7 +63,7 @@ INSTALLED_APPS = [
     'allauth.socialaccount.providers.box',
     'allauth.socialaccount.providers.cern',
     'allauth.socialaccount.providers.cilogon',
-    'allauth.socialaccount.providers.clever',
+    #'allauth.socialaccount.providers.clever',
     'allauth.socialaccount.providers.coinbase',
     'allauth.socialaccount.providers.dataporten',
     'allauth.socialaccount.providers.daum',
@@ -175,7 +175,9 @@ ROOT_URLCONF = 'walleteth.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            'templates'
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -263,3 +265,4 @@ SOCIALACCOUNT_PROVIDERS = {
         }
     }
 }
+
